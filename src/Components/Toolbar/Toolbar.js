@@ -9,7 +9,7 @@ const toolbar = props => (
             <div className="toolbar_toggle-button">
                 <DrawerToggleButton click={props.drawerClickHandler} />
             </div>
-            <div className="toolbar_logo"><p onClick={() => {props.handleScroll((props.landingRef).current);}}>THE LOGO</p></div>
+            <div className="toolbar_logo"><p onClick={() => {props.handleScroll((props.landingRef).current);}}>DAREK RADKE</p></div>
             <div className="spacer" />
             <div className="toolbar_nav-items">
                 <ul>

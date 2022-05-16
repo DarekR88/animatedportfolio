@@ -6,7 +6,7 @@ const secondScreen = props => {
 
     return (
         <div className="secondScreen" ref={props.secondRef}>
-            <p className="content">Second Screen</p>
+            <p className="secondScreenContent">Second Screen</p>
         </div>
     );
 };
