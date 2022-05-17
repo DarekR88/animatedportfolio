@@ -4,6 +4,12 @@
     background-color: black;
 }
 
+.firstParagraph {
+  margin: auto;
+  padding: 10px;
+  text-align: center;
+}
+
 @keyframes dropIn {
     0% {
       transform: translateY(-100vh);
@@ -25,8 +31,9 @@
 .landing-screen-content {
     display: flex;
     flex-direction: row;
+    align-items: center;
+    justify-content: center;
     margin: auto;
-    padding-left: 50%;
     padding-top: 25%;
 }
 

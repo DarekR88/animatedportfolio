@@ -16,7 +16,11 @@ const landingScreen = props => {
                 <p className="eighthL">D</p>
                 <p className="ninthL">K</p>
                 <p className="tenthL">E</p>
+
             </div>
+                <p className="firstParagraph">
+                    Independent website developer.
+                </p>
         </div>
     );
 };
