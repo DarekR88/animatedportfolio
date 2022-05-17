@@ -15,7 +15,10 @@
 
 .landing-screen-content {
     animation: 1s ease-out 0s 1 slideInFromLeft;
-    margin: 0;
-    padding: 50%;
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+    padding-left: 50%;
+    padding-top: 25%;
 }
 
