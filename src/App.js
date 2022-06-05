@@ -6,6 +6,7 @@ import Backdrop from './Components/Backdrop/Backdrop';
 import LandingScreen from './Components/LandingScreen/LandingScreen'
 import SecondScreen from './Components/SecondScreen/SecondScreen';
 import ThirdScreen from './Components/ThirdScreen/ThirdScreen';
+import CanvasGame from './Components/CanvasGame/Canvasgame';
 
 const App = () => {
 
@@ -43,9 +44,10 @@ const App = () => {
       <Toolbar drawerClickHandler={toggleDrawer} handleScroll={handleScroll} landingRef={landingRef} secondRef={secondRef} thirdRef={thirdRef} />
       <SideDrawer show={isSideDrawerOpen} drawerClickHandler={toggleDrawer} handleScroll={handleScroll} landingRef={landingRef} secondRef={secondRef} thirdRef={thirdRef} />
       {backdrop}
-            <LandingScreen landingRef={landingRef} />
-            <SecondScreen secondRef={secondRef} />
-            <ThirdScreen thirdRef={thirdRef} /> 
+      <CanvasGame />
+      <LandingScreen landingRef={landingRef} />
+      <SecondScreen secondRef={secondRef} />
+      <ThirdScreen thirdRef={thirdRef} /> 
     </div >
   );
 }
