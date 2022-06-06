@@ -1,9 +1,12 @@
 import React from "react";
+// import CanvasGame from '../CanvasGame/CanvasGame'
 import './LandingScreen.css'
 
 
-const landingScreen = props => {
+const LandingScreen = props => {
+
     return (
+        
         <div className="landingScreen" ref={props.landingRef}>
             <div className="landing-screen-content">
                 <p className="firstL">D</p>
@@ -21,8 +24,9 @@ const landingScreen = props => {
                 <p className="firstParagraph">
                     Independent website developer.
                 </p>
+                <button onClick={props.gameToggle}>Start Game!</button>
         </div>
     );
 };
 
-export default landingScreen;
+export default LandingScreen;

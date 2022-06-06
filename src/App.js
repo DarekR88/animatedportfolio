@@ -6,10 +6,11 @@ import Backdrop from './Components/Backdrop/Backdrop';
 import LandingScreen from './Components/LandingScreen/LandingScreen'
 import SecondScreen from './Components/SecondScreen/SecondScreen';
 import ThirdScreen from './Components/ThirdScreen/ThirdScreen';
-import CanvasGame from './Components/CanvasGame/Canvasgame';
+import CanvasGame from './Components/CanvasGame/CanvasGame';
 
 const App = () => {
-
+  
+  const [isGameActive, setIsGameActive] = useState(false);
   const [isSideDrawerOpen, setIsSideDrawerOpen] = useState(false);
 
   const landingRef = useRef(null);
@@ -38,14 +39,27 @@ const App = () => {
     backdrop = <Backdrop click={backdropClickHnadler}/>
   }
 
+  const startGame = () => {
+      setIsGameActive(!isGameActive);
+  };
+
+  let canvasGame;
+  let landingScreen;
+
+  if (isGameActive) {
+      canvasGame = <CanvasGame /> 
+  } else {
+    landingScreen = <LandingScreen landingRef={landingRef} gameToggle={startGame} />
+  }
+
 
   return (
     <div style = {{ height: '100%'}} >
       <Toolbar drawerClickHandler={toggleDrawer} handleScroll={handleScroll} landingRef={landingRef} secondRef={secondRef} thirdRef={thirdRef} />
       <SideDrawer show={isSideDrawerOpen} drawerClickHandler={toggleDrawer} handleScroll={handleScroll} landingRef={landingRef} secondRef={secondRef} thirdRef={thirdRef} />
       {backdrop}
-      <CanvasGame />
-      <LandingScreen landingRef={landingRef} />
+      {canvasGame}
+      {landingScreen}
       <SecondScreen secondRef={secondRef} />
       <ThirdScreen thirdRef={thirdRef} /> 
     </div >

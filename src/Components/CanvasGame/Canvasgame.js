@@ -234,8 +234,6 @@ const CanvasGame = () => {
     <div>
       <canvas
         id="myCanvas"
-        width="500"
-        height="500"
       >
         Your browser does not support the HTML canvas tag.
       </canvas>
