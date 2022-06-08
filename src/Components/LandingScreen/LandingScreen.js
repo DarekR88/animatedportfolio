@@ -1,5 +1,4 @@
 import React from "react";
-// import CanvasGame from '../CanvasGame/CanvasGame'
 import './LandingScreen.css'
 
 
@@ -25,6 +24,7 @@ const LandingScreen = props => {
                     Independent website developer.
                 </p>
                 <button onClick={props.gameToggle}>Start Game!</button>
+
         </div>
     );
 };

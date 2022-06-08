@@ -1,6 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
+import "./CanvasGame.css"
 
 const CanvasGame = () => {
+
+    const [score, setScore] = useState(0)
+
   React.useEffect(() => {
     const canvas = document.querySelector('canvas');
 
@@ -108,7 +112,7 @@ const CanvasGame = () => {
     const x = canvas.width / 2
     const y = canvas.height /2
     
-    const player = new Player(x, y, 10, 'white')
+    const player = new Player(x, y, 10, 'gray')
     
     const projectiles = []
     
@@ -182,7 +186,8 @@ const CanvasGame = () => {
                 // when projectiles touch enemy
                 if (dist - enemy.radius - projectile.radius < 1) {
                     //increase score
-                    // score += 100
+                    setScore(+100)
+                    // console.log(score)
     
                     // create particle effect
                     for (let i = 0; i < enemy.radius * 2; i++) {
@@ -216,27 +221,25 @@ const CanvasGame = () => {
     spawnEnemies()
     
     canvas.addEventListener('click', (event) => {
-        console.log(event)
         const angle = Math.atan2(event.clientY - canvas.height / 2, event.clientX - canvas.width / 2)
         const velocity = {
             x: Math.cos(angle) * 5,
             y: Math.sin(angle) * 5
         }
         projectiles.push(new Projectile(canvas.width / 2, canvas.height / 2, 5, 'white', velocity ))
-        console.log(angle)
     })
     
-  }, []);
+  }, [score]);
 
 
 
   return (
-    <div>
+    <div className="gameDiv">
       <canvas
         id="myCanvas"
       >
-        Your browser does not support the HTML canvas tag.
       </canvas>
+      {/* <p>Score: {score} </p> */}
     </div>
   );
 }

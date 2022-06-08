@@ -47,14 +47,14 @@ const App = () => {
   let landingScreen;
 
   if (isGameActive) {
-      canvasGame = <CanvasGame /> 
+    canvasGame = <CanvasGame /> 
   } else {
     landingScreen = <LandingScreen landingRef={landingRef} gameToggle={startGame} />
   }
 
 
   return (
-    <div style = {{ height: '100%'}} >
+    <div>
       <Toolbar drawerClickHandler={toggleDrawer} handleScroll={handleScroll} landingRef={landingRef} secondRef={secondRef} thirdRef={thirdRef} />
       <SideDrawer show={isSideDrawerOpen} drawerClickHandler={toggleDrawer} handleScroll={handleScroll} landingRef={landingRef} secondRef={secondRef} thirdRef={thirdRef} />
       {backdrop}
