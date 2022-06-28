@@ -23,7 +23,7 @@ const LandingScreen = props => {
                 <p className="firstParagraph">
                     Independent website developer.
                 </p>
-                <button onClick={props.gameToggle}>Start Game!</button>
+                
 
         </div>
     );

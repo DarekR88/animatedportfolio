@@ -1,16 +1,15 @@
 import React, { useState, useRef } from 'react';
 // import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
-import Toolbar from './Components/Toolbar/Toolbar'
-import SideDrawer from './Components/SideDrawer/SideDrawer'
-import Backdrop from './Components/Backdrop/Backdrop';
-import LandingScreen from './Components/LandingScreen/LandingScreen'
-import SecondScreen from './Components/SecondScreen/SecondScreen';
-import ThirdScreen from './Components/ThirdScreen/ThirdScreen';
-import CanvasGame from './Components/CanvasGame/CanvasGame';
+import Toolbar from './components/Toolbar/Toolbar'
+import SideDrawer from './components/SideDrawer/SideDrawer'
+import Backdrop from './components/Backdrop/Backdrop';
+import LandingScreen from './components/LandingScreen/LandingScreen'
+import SecondScreen from './components/SecondScreen/SecondScreen';
+import ThirdScreen from './components/ThirdScreen/ThirdScreen';
+
 
 const App = () => {
   
-  const [isGameActive, setIsGameActive] = useState(false);
   const [isSideDrawerOpen, setIsSideDrawerOpen] = useState(false);
 
   const landingRef = useRef(null);
@@ -39,18 +38,6 @@ const App = () => {
     backdrop = <Backdrop click={backdropClickHnadler}/>
   }
 
-  const startGame = () => {
-      setIsGameActive(!isGameActive);
-  };
-
-  let canvasGame;
-  let landingScreen;
-
-  if (isGameActive) {
-    canvasGame = <CanvasGame /> 
-  } else {
-    landingScreen = <LandingScreen landingRef={landingRef} gameToggle={startGame} />
-  }
 
 
   return (
@@ -58,8 +45,7 @@ const App = () => {
       <Toolbar drawerClickHandler={toggleDrawer} handleScroll={handleScroll} landingRef={landingRef} secondRef={secondRef} thirdRef={thirdRef} />
       <SideDrawer show={isSideDrawerOpen} drawerClickHandler={toggleDrawer} handleScroll={handleScroll} landingRef={landingRef} secondRef={secondRef} thirdRef={thirdRef} />
       {backdrop}
-      {canvasGame}
-      {landingScreen}
+      <LandingScreen />
       <SecondScreen secondRef={secondRef} />
       <ThirdScreen thirdRef={thirdRef} /> 
     </div >

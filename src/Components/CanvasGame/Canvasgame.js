@@ -3,9 +3,13 @@ import "./CanvasGame.css"
 
 const CanvasGame = () => {
 
-    const [score, setScore] = useState(0)
+    const [score, setScore] = useState(0);
 
-  React.useEffect(() => {
+    // React.useEffect(() => {
+    //     console.log('score:' + score);
+    // }, [score]);
+
+    React.useEffect(() => {
     const canvas = document.querySelector('canvas');
 
     const c = canvas.getContext('2d');
@@ -186,7 +190,7 @@ const CanvasGame = () => {
                 // when projectiles touch enemy
                 if (dist - enemy.radius - projectile.radius < 1) {
                     //increase score
-                    setScore(+100)
+                    setScore(score + 100)
                     // console.log(score)
     
                     // create particle effect
@@ -239,7 +243,7 @@ const CanvasGame = () => {
         id="myCanvas"
       >
       </canvas>
-      {/* <p>Score: {score} </p> */}
+      <p>Score: {score} </p>
     </div>
   );
 }
