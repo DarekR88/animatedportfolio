@@ -48,7 +48,7 @@ const App = () => {
       <LandingScreen />
       <SecondScreen secondRef={secondRef} />
       <ThirdScreen thirdRef={thirdRef} /> 
-    </div >
+    </div>
   );
 }
 
