@@ -40,7 +40,13 @@
     padding: 0 0.5rem;
 }
 
-.toolbar_nav-items a {
+.pageButton {
+    border: none; 
+    color: white;
+    background: none;
+}
+
+/* .toolbar_nav-items a {
     color: white;
     text-decoration: none;
 }
@@ -48,7 +54,7 @@
 .toolbar_nav-items a:hover,
 .toolbar_nav-items a:active {
     color: orange;
-}
+} */
 
 @media (max-width: 768px) {
     .toolbar_nav-items {
