@@ -13,9 +13,9 @@ const toolbar = props => (
             <div className="spacer" />
             <div className="toolbar_nav-items">
                 <ul>
-                    <li><p onClick={() => {props.handleScroll((props.landingRef).current);}}>Home</p></li>
-                    <li><p onClick={() => {props.handleScroll((props.secondRef).current);}}>About</p></li>
-                    <li><p onClick={() => {props.handleScroll((props.thirdRef).current);}}>Misc</p></li>
+                    <li><button onClick={() => {props.handleScroll((props.landingRef).current);}}>Home</button></li>
+                    <li><button onClick={() => {props.handleScroll((props.secondRef).current);}}>About</button></li>
+                    <li><button onClick={() => {props.handleScroll((props.thirdRef).current);}}>Misc</button></li>
                 </ul>
             </div>
         </nav>
