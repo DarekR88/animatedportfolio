@@ -11,18 +11,18 @@ const sideDrawer = props => {
     <nav className={drawerClasses}>
         <button className="sideDrawerCloseButton" onClick={props.drawerClickHandler}>x</button>
         <ul>
-            <li><p onClick={() => {
+            <li><button onClick={() => {
                 props.drawerClickHandler();
                 props.handleScroll((props.landingRef).current);
-            }}>Home</p></li>
-            <li><p onClick={() => {
+            }}>Home</button></li>
+            <li><button onClick={() => {
                 props.drawerClickHandler();
                 props.handleScroll((props.secondRef).current);
-            }}>About</p></li>
-            <li><p onClick={() => {
+            }}>About</button></li>
+            <li><button onClick={() => {
                 props.drawerClickHandler();
                 props.handleScroll((props.thirdRef).current);
-            }}>Misc</p></li>
+            }}>Misc</button></li>
         </ul>
     </nav>
     );
