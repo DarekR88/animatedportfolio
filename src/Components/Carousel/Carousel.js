@@ -1,4 +1,5 @@
 import React from "react";
+import "react-image-gallery/styles/css/image-gallery.css";
 import './Carousel.css';
 import ImageGallery from 'react-image-gallery';
 import img1 from '../../static/images/img1.png';
@@ -18,11 +19,18 @@ const images = [
 ];
 
 const Carousel = () => {
-    return (
-        <div className="Carousel">
-          <ImageGallery items={images} />
-        </div>
-      );
+
+  // const imageList = images.map((img, i) => {
+  //   return (
+  //     <img key={`image-${i}`} src={img.original} className="c-image" />
+  //   )
+  // });
+
+  return (
+      <div className="Carousel">
+        <ImageGallery items={images} />
+      </div>
+    );
 }
 
 export default Carousel;
