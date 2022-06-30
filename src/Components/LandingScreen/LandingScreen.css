@@ -2,6 +2,7 @@
     height: 100vh;
     color: white;
     background-color: #122c34;
+    border: 1px solid purple;
 }
 
 .firstParagraph {

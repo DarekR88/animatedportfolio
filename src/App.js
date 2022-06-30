@@ -45,7 +45,7 @@ const App = () => {
       <Toolbar drawerClickHandler={toggleDrawer} handleScroll={handleScroll} landingRef={landingRef} secondRef={secondRef} thirdRef={thirdRef} />
       <SideDrawer show={isSideDrawerOpen} drawerClickHandler={toggleDrawer} handleScroll={handleScroll} landingRef={landingRef} secondRef={secondRef} thirdRef={thirdRef} />
       {backdrop}
-      <LandingScreen />
+      <LandingScreen landingRef={landingRef}/>
       <SecondScreen secondRef={secondRef} />
       <ThirdScreen thirdRef={thirdRef} /> 
     </div>
