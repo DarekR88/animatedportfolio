@@ -6,7 +6,7 @@
     align-items: center;
     flex-direction: column;
     background-color: #122c34;
-    border: 1px solid lime;
+    /* border: 1px solid lime; */
 }
 
 .secondScreenContent {

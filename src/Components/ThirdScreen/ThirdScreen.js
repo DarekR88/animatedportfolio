@@ -22,7 +22,8 @@ const ThirdScreen = props => {
 
     return (
         <div className="thirdScreen" ref={props.thirdRef}>
-            <form ref={form} onSubmit={sendEmail}>
+            <p className="formHeader">Contact Me</p>
+            <form className="emailForm" ref={form} onSubmit={sendEmail}>
                 <label>Name</label>
                 <input type="text" name="user_name" />
                 <label>Email</label>
