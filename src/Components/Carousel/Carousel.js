@@ -28,7 +28,7 @@ const Carousel = () => {
 
   return (
       <div className="Carousel">
-        <ImageGallery items={images} autoPlay={true} />
+        <ImageGallery items={images} autoPlay={true} showBullets={true} slideDuration={600} />
       </div>
     );
 }
