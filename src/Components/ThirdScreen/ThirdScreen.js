@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useRef } from "react";
+import emailjs from '@emailjs/browser';
 import './ThirdScreen.css'
 
 
@@ -9,7 +10,7 @@ const ThirdScreen = props => {
     const sendEmail = (e) => {
       e.preventDefault();
   
-      emailjs.sendForm('service_qfgklbh', 'YOUR_TEMPLATE_ID', form.current, 'DfRYHaxL9gIFFEmtj')
+      emailjs.sendForm('service_qfgklbh', 'template_nkx1gkp', form.current, 'DfRYHaxL9gIFFEmtj')
         .then((result) => {
             console.log(result.text);
         }, (error) => {
