@@ -2,9 +2,9 @@ import React from "react";
 import "react-image-gallery/styles/css/image-gallery.css";
 import './Carousel.css';
 import ImageGallery from 'react-image-gallery';
-import img1 from '../../static/images/img1.png';
-import img2 from '../../static/images/img2.png';
-import img3 from '../../static/images/img3.png';
+import img1 from '../../static/images/responsive-image.jpg';
+import img2 from '../../static/images/react-logo-large.jpg';
+import img3 from '../../static/images/learning-image-large.jpg';
 
 const images = [
   {
