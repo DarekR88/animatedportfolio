@@ -39,6 +39,7 @@
 }
 
 .sideDrawerCloseButton {
+    color: white;
     position: fixed;
     top: 0;
     right: 0;
@@ -51,6 +52,12 @@
     padding-right: 25px;
     box-sizing: border-box;
     font-size: 3rem;
+}
+
+.drawerButton {
+    border: none; 
+    color: white;
+    background: none;
 }
 
 @media (min-width: 769) {
