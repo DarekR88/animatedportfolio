@@ -4,8 +4,9 @@
     left: 0;
     width: 100%;
     color: white;
-    /* background: blue; */
+    background: #0A213B;
     height: 56px;
+    z-index: 10;
 }
 
 .toolbar_navigation {

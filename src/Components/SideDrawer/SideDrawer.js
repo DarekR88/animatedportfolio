@@ -22,7 +22,7 @@ const sideDrawer = props => {
             <li><button className="drawerButton" onClick={() => {
                 props.drawerClickHandler();
                 props.handleScroll((props.thirdRef).current);
-            }}>Misc</button></li>
+            }}>Contact</button></li>
         </ul>
     </nav>
     );
