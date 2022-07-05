@@ -7,7 +7,9 @@ const secondScreen = props => {
 
     return (
         <div className="secondScreen" ref={props.secondRef}>
-            <Carousel />
+            <div className="carouselContainer">
+                <Carousel />
+            </div>
         </div>
     );
 };
