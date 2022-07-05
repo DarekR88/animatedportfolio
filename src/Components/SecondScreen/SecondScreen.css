@@ -15,7 +15,16 @@
     color: white;
 }
 
+
 .carouselContainer {
     margin-top: 56px;
     max-width: 950px;
+}
+
+button.image-gallery-icon {
+    color: #0A213B;
+}
+
+.carouselBlurbs {
+    color: white;
 }
