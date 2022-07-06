@@ -48,6 +48,15 @@
     background: none;
 }
 
+.toolbar.hide {
+    transform: translateY(-100%);
+    transition: transform 0.3s ease-out;
+}
+
+.toolbar.show{
+    transition: transform 0.3s ease-in;
+}
+
 @media (max-width: 768px) {
     .toolbar_nav-items {
         display: none;
