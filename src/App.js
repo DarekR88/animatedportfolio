@@ -11,7 +11,21 @@ import ThirdScreen from './components/ThirdScreen/ThirdScreen';
 const App = () => {
   
   const [isSideDrawerOpen, setIsSideDrawerOpen] = useState(false);
-  const [scrollDir, setScrollDir] = useState("scrolling down");
+  const [scrollDir, setScrollDir] = useState(true);
+  const [scrollPosition, setScrollPosition] = useState(0);
+
+  const getScroll = () => {
+    const position = window.pageYOffset;
+    setScrollPosition(position);
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", getScroll);
+
+    return () => {
+      window.removeEventListener("scroll", getScroll);
+    };
+  }, []);
 
   useEffect(() => {
     const threshold = 0;
@@ -25,7 +39,7 @@ const App = () => {
         ticking = false;
         return;
       }
-      setScrollDir(scrollY > lastScrollY ? "scrolling down" : "scrolling up");
+      setScrollDir(scrollY > lastScrollY ? true : false);
       lastScrollY = scrollY > 0 ? scrollY : 0;
       ticking = false;
     };
@@ -75,7 +89,7 @@ const App = () => {
 
   return (
     <div>
-      <Toolbar drawerClickHandler={toggleDrawer} handleScroll={handleScroll} landingRef={landingRef} secondRef={secondRef} thirdRef={thirdRef} />
+      <Toolbar scrollPosition={scrollPosition} show={scrollDir} drawerClickHandler={toggleDrawer} handleScroll={handleScroll} landingRef={landingRef} secondRef={secondRef} thirdRef={thirdRef} />
       <SideDrawer show={isSideDrawerOpen} drawerClickHandler={toggleDrawer} handleScroll={handleScroll} landingRef={landingRef} secondRef={secondRef} thirdRef={thirdRef} />
       {backdrop}
       <LandingScreen landingRef={landingRef}/>

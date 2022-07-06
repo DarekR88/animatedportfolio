@@ -3,8 +3,23 @@ import React from "react";
 import './Toolbar.css';
 import DrawerToggleButton from "../SideDrawer/DrawerToggleButton";
 
-const toolbar = props => (
-    <header className="toolbar">
+const toolbar = props => {
+
+    let toolbarClasses = "toolbar"
+    let scrollPosition = props.scrollPosition
+
+    if (scrollPosition = 0) {
+        toolbarClasses = "toolbar"
+    }
+
+    if (props.show) {
+        toolbarClasses = "toolbar hide"
+    } else {
+        toolbarClasses = "toolbar show"
+    }
+
+    return(
+    <header className={toolbarClasses}>
         <nav className="toolbar_navigation">
             <div className="toolbar_toggle-button">
                 <DrawerToggleButton click={props.drawerClickHandler} />
@@ -20,6 +35,7 @@ const toolbar = props => (
             </div>
         </nav>
     </header>
-);
+    )
+    };
 
 export default toolbar;
