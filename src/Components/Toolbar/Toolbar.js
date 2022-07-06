@@ -6,17 +6,20 @@ import DrawerToggleButton from "../SideDrawer/DrawerToggleButton";
 const toolbar = props => {
 
     let toolbarClasses = "toolbar"
-    let scrollPosition = props.scrollPosition
 
-    if (scrollPosition = 0) {
-        toolbarClasses = "toolbar"
-    }
+
 
     if (props.show) {
         toolbarClasses = "toolbar hide"
     } else {
         toolbarClasses = "toolbar show"
-    }
+    } 
+    
+
+    
+
+    
+
 
     return(
     <header className={toolbarClasses}>

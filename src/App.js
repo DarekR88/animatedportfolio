@@ -11,7 +11,7 @@ import ThirdScreen from './components/ThirdScreen/ThirdScreen';
 const App = () => {
   
   const [isSideDrawerOpen, setIsSideDrawerOpen] = useState(false);
-  const [scrollDir, setScrollDir] = useState(true);
+  const [scrollDir, setScrollDir] = useState(0);
   const [scrollPosition, setScrollPosition] = useState(0);
 
   const getScroll = () => {
@@ -39,7 +39,7 @@ const App = () => {
         ticking = false;
         return;
       }
-      setScrollDir(scrollY > lastScrollY ? true : false);
+      setScrollDir(scrollY > lastScrollY ? 1 : 0);
       lastScrollY = scrollY > 0 ? scrollY : 0;
       ticking = false;
     };
