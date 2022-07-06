@@ -30,7 +30,7 @@ const ThirdScreen = props => {
                 <input type="email" name="user_email" />
                 <label>Message</label>
                 <textarea name="message" />
-                <input type="submit" value="Send" />
+                <input className="sendButton" type="submit" value="Send" />
             </form>
         </div>
     );

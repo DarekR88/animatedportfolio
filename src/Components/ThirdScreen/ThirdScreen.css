@@ -17,5 +17,12 @@
     color: white;
     display: flex;
     flex-direction: column;
+    width: 550px;
 
+}
+
+.sendButton {
+    color:#0A213B;
+    background: white;
+    /* border: none; */
 }
