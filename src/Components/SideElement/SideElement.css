@@ -1,0 +1,18 @@
+.side-element-wrapper {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
+
+.side-element-wrapper ul {
+    height: 50%;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.svg-icon {
+    height: 50px;
+}
+

@@ -9,10 +9,10 @@ const SideElement = props => {
 
 
     return (
-        <div className="sideElemntWrapper">
+        <div className="side-element-wrapper">
             <ul>
-                <li><a href="" rel="noreferrer" className="side-a">{githubIcon}</a></li>
-                <li><a href="" rel="noreferrer" className="side-a">{linkedinIcon}</a></li>
+                <li><a href="https://github.com/DarekR88" rel="noreferrer" className="side-a"><img className="svg-icon" src={githubIcon} alt="github icon"/></a></li>
+                <li><a href="https://www.linkedin.com/in/darek-radke-aa26b7173/" rel="noreferrer" className="side-a"><img className="svg-icon" src={linkedinIcon} alt="linkedin icon"/></a></li>
                 {/* <li><a href="" rel="noreferrer" className="side-a">Contact</a></li> */}
             </ul>
         </div>
