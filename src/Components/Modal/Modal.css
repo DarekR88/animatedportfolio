@@ -41,3 +41,7 @@
     color: orange;
     background: none;
 }
+
+.message-area {
+    height: 75px;
+}

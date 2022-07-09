@@ -35,7 +35,7 @@ const Modal = props => {
                 <label>Email</label>
                 <input type="email" name="user_email" />
                 <label>Message</label>
-                <textarea name="message" />
+                <textarea className="message-area" name="message" />
                 <input className="sendButton" type="submit" value="Send" />
             </form>
         </div>

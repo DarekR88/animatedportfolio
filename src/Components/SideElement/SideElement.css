@@ -18,11 +18,11 @@
 }
 
 .email-link {
+    color: orange;
     margin-left: 15px;
     margin-bottom: 25px;
     writing-mode: vertical-lr;
     transform: rotate(180deg);
     text-decoration: none;
-    color: white;
 }
 
