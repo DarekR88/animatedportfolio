@@ -18,8 +18,17 @@ const Modal = props => {
 
     }
 
+    let modalClasses = "modal"
+
+    if (props.modalOpen) {
+        modalClasses = "modal hide"
+    } else {
+        modalClasses = "modal show"
+    } 
+
     return(
-        <div>
+        <div className={modalClasses}>
+            <button onClick={props.toggleModal}>close</button>
             <form className="emailForm" ref={form} onSubmit={sendEmail}>
                 <label>Name</label>
                 <input type="text" name="user_name" />

@@ -91,6 +91,10 @@ const App = () => {
     backdrop = <Backdrop drawerOpen={isSideDrawerOpen} modalOpen={modalOpen} toggleModal={toggleModal} click={backdropClickHnadler}/>
   }
 
+  if(modalOpen) {
+    backdrop = <Backdrop drawerOpen={isSideDrawerOpen} modalOpen={modalOpen} toggleModal={toggleModal} click={backdropClickHnadler}/>
+  }
+
 
 
   return (
@@ -101,7 +105,7 @@ const App = () => {
       <SideElement />
       <LandingScreen landingRef={landingRef}/>
       <SecondScreen secondRef={secondRef} />
-      <ThirdScreen thirdRef={thirdRef} toggleModal={toggleModal} /> 
+      <ThirdScreen modalOpen={modalOpen} thirdRef={thirdRef} toggleModal={toggleModal} /> 
     </div>
   );
 }

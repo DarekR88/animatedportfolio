@@ -26,3 +26,14 @@
     background: white;
     /* border: none; */
 }
+
+.contact-me {
+    color: white;
+    margin: 0px 100px;
+}
+
+.modal-button {
+    border: none; 
+    color: white;
+    background: none;
+}
