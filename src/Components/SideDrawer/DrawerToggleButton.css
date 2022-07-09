@@ -20,3 +20,8 @@
     height: 2px;
     background: white;
 }
+
+.email-link {
+    justify-content: space-around;
+    writing-mode: vertical-lr;
+}
