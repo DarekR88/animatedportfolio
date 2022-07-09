@@ -88,7 +88,7 @@ const App = () => {
   let backdrop;
 
   if (isSideDrawerOpen) {
-    backdrop = <Backdrop click={backdropClickHnadler}/>
+    backdrop = <Backdrop drawerOpen={isSideDrawerOpen} modalOpen={modalOpen} toggleModal={toggleModal} click={backdropClickHnadler}/>
   }
 
 
