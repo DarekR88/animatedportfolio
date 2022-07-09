@@ -1,5 +1,15 @@
 .modal {
+    position: fixed;
+    height: 300;
+    width: 500;
+    top: 50%;
+    left: 50%;
+    margin-top: -150px;
+    margin-left: -250px;
     z-index: 150;
+    background-color: #424549;
+    padding: 50px;
+    border-radius: 10px;
 }
 
 .emailForm {
@@ -11,7 +21,23 @@
 }
 
 .sendButton {
-    color:#0A213B;
-    background: white;
-    /* border: none; */
+    border: 2px solid orange; 
+    margin-top: 25px;
+    padding: 5px;
+    border-radius: 5px;
+    color: orange;
+    background: none;
+}
+
+.modal-close-button {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    border: 2px solid orange; 
+    margin-top: 10px;
+    margin-right: 10px;
+    padding: 5px;
+    border-radius: 5px;
+    color: orange;
+    background: none;
 }

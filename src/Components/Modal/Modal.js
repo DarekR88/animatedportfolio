@@ -28,7 +28,7 @@ const Modal = props => {
 
     return(
         <div className={modalClasses}>
-            <button onClick={props.toggleModal}>close</button>
+            <button className="modal-close-button" onClick={props.toggleModal}>Close X</button>
             <form className="emailForm" ref={form} onSubmit={sendEmail}>
                 <label>Name</label>
                 <input type="text" name="user_name" />
