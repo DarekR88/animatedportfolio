@@ -14,6 +14,11 @@ const App = () => {
   const [isSideDrawerOpen, setIsSideDrawerOpen] = useState(false);
   const [scrollDir, setScrollDir] = useState(0);
   const [scrollPosition, setScrollPosition] = useState(0);
+  const [modalOpen, setModalOpen] = useState(false)
+
+  const toggleModal = () => {
+    setModalOpen(!modalOpen)
+  }
 
   const getScroll = () => {
     const position = window.pageYOffset;
@@ -96,7 +101,7 @@ const App = () => {
       <SideElement />
       <LandingScreen landingRef={landingRef}/>
       <SecondScreen secondRef={secondRef} />
-      <ThirdScreen thirdRef={thirdRef} /> 
+      <ThirdScreen thirdRef={thirdRef} toggleModal={toggleModal} /> 
     </div>
   );
 }
