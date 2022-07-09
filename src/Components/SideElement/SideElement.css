@@ -14,5 +14,16 @@
 
 .svg-icon {
     height: 50px;
+    margin-bottom: 15px;
+}
+
+.email-link {
+    margin-left: 15px;
+    margin-bottom: 25px;
+    writing-mode: vertical-lr;
+    transform: rotate(180deg);
+    text-decoration: none;
+    color: white;
+
 }
 
