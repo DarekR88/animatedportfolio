@@ -3,20 +3,20 @@ import './DrawerToggleButton.css';
 
 const drawerToggleButton = props => {
 
-    let toggleButton = "toggle-button"
+    let toggleButton = "menu-btn"
 
 
 
     if (props.drawerOpen) {
-        toggleButton = "toggle-button x"
+        toggleButton = "menu-btn open"
     } else {
-        toggleButton = "toggle-button burger"
+        toggleButton = "menu-btn"
     } 
     
 
     return(
-        <button className="toggle-button" onClick={props.click}>
-            <div className="toggle-button-burger" />
+        <button className={toggleButton} onClick={props.click}>
+            <div className="menu-btn__burger"/>
         </button>
     )
 

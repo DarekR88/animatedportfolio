@@ -6,6 +6,8 @@ import DrawerToggleButton from "../SideDrawer/DrawerToggleButton";
 const toolbar = props => {
 
     let toolbarClasses = "toolbar"
+    
+    console.log(props.show)
 
 
 
