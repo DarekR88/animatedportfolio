@@ -26,3 +26,8 @@
     text-decoration: none;
 }
 
+@media (max-width: 768px) {
+    .side-element-wrapper {
+        display: none;
+    }
+}

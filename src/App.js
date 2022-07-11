@@ -102,10 +102,10 @@ const App = () => {
       <Toolbar scrollPosition={scrollPosition} drawerOpen={isSideDrawerOpen} show={scrollDir} drawerClickHandler={toggleDrawer} handleScroll={handleScroll} landingRef={landingRef} secondRef={secondRef} thirdRef={thirdRef} />
       <SideDrawer show={isSideDrawerOpen} drawerClickHandler={toggleDrawer} handleScroll={handleScroll} landingRef={landingRef} secondRef={secondRef} thirdRef={thirdRef} />
       {backdrop}
-      <SideElement />
       <LandingScreen landingRef={landingRef}/>
       <SecondScreen secondRef={secondRef} />
       <ThirdScreen modalOpen={modalOpen} thirdRef={thirdRef} toggleModal={toggleModal} /> 
+      <SideElement />
     </div>
   );
 }
