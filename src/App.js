@@ -99,7 +99,7 @@ const App = () => {
 
   return (
     <div>
-      <Toolbar scrollPosition={scrollPosition} show={scrollDir} drawerClickHandler={toggleDrawer} handleScroll={handleScroll} landingRef={landingRef} secondRef={secondRef} thirdRef={thirdRef} />
+      <Toolbar scrollPosition={scrollPosition} drawerOpen={isSideDrawerOpen} show={scrollDir} drawerClickHandler={toggleDrawer} handleScroll={handleScroll} landingRef={landingRef} secondRef={secondRef} thirdRef={thirdRef} />
       <SideDrawer show={isSideDrawerOpen} drawerClickHandler={toggleDrawer} handleScroll={handleScroll} landingRef={landingRef} secondRef={secondRef} thirdRef={thirdRef} />
       {backdrop}
       <SideElement />

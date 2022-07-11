@@ -7,9 +7,19 @@
     margin-top: -150px;
     margin-left: -250px;
     z-index: 150;
-    background-color: #424549;
+    background-color: #282b30;
     padding: 50px;
     border-radius: 10px;
+    transition: all .5s ease-in-out;
+}
+
+.modal .hide {
+    opacity: 0;
+}
+
+.modal .show {
+    transition: opacity 0.5s;
+    opacity: 1;
 }
 
 .emailForm {
@@ -18,6 +28,10 @@
     flex-direction: column;
     width: 550px;
 
+}
+
+.modal-imput {
+    background: #424549
 }
 
 .sendButton {

@@ -31,11 +31,11 @@ const Modal = props => {
             <button className="modal-close-button" onClick={props.toggleModal}>Close X</button>
             <form className="emailForm" ref={form} onSubmit={sendEmail}>
                 <label>Name</label>
-                <input type="text" name="user_name" />
+                <input className="modal-imput" type="text" name="user_name" />
                 <label>Email</label>
-                <input type="email" name="user_email" />
+                <input className="modal-imput" type="email" name="user_email" />
                 <label>Message</label>
-                <textarea className="message-area" name="message" />
+                <textarea className="message-area modal-imput" name="message" />
                 <input className="sendButton" type="submit" value="Send" />
             </form>
         </div>

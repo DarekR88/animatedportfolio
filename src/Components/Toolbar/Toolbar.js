@@ -25,7 +25,7 @@ const toolbar = props => {
     <header className={toolbarClasses}>
         <nav className="toolbar_navigation">
             <div className="toolbar_toggle-button">
-                <DrawerToggleButton click={props.drawerClickHandler} />
+                <DrawerToggleButton drawerOpen={props.drawerOpen} click={props.drawerClickHandler} />
             </div>
             <div className="toolbar_logo"><p onClick={() => {props.handleScroll((props.landingRef).current);}}>DAREK RADKE</p></div>
             <div className="spacer" />
