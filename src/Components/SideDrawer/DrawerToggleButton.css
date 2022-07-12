@@ -29,6 +29,7 @@
     transition: all .5s ease-in-out;
   }
   .menu-btn__burger::before {
+
     transform: translateY(-16px);
   }
   .menu-btn__burger::after {

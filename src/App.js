@@ -1,24 +1,22 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useRef, useEffect } from "react";
 // import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
-import Toolbar from './components/Toolbar/Toolbar'
-import SideDrawer from './components/SideDrawer/SideDrawer'
-import Backdrop from './components/Backdrop/Backdrop';
-import LandingScreen from './components/LandingScreen/LandingScreen'
-import SecondScreen from './components/SecondScreen/SecondScreen';
-import ThirdScreen from './components/ThirdScreen/ThirdScreen';
-import SideElement from './components/SideElement/SideElement';
-
+import Toolbar from "./components/Toolbar/Toolbar";
+import SideDrawer from "./components/SideDrawer/SideDrawer";
+import Backdrop from "./components/Backdrop/Backdrop";
+import LandingScreen from "./components/LandingScreen/LandingScreen";
+import SecondScreen from "./components/SecondScreen/SecondScreen";
+import ThirdScreen from "./components/ThirdScreen/ThirdScreen";
+import SideElement from "./components/SideElement/SideElement";
 
 const App = () => {
-  
   const [isSideDrawerOpen, setIsSideDrawerOpen] = useState(false);
   const [scrollDir, setScrollDir] = useState(0);
   const [scrollPosition, setScrollPosition] = useState(0);
-  const [modalOpen, setModalOpen] = useState(false)
+  const [modalOpen, setModalOpen] = useState(false);
 
   const toggleModal = () => {
-    setModalOpen(!modalOpen)
-  }
+    setModalOpen(!modalOpen);
+  };
 
   const getScroll = () => {
     const position = window.pageYOffset;
@@ -64,7 +62,6 @@ const App = () => {
     return () => window.removeEventListener("scroll", onScroll);
   }, [scrollDir]);
 
-
   const landingRef = useRef(null);
   const secondRef = useRef(null);
   const thirdRef = useRef(null);
@@ -82,32 +79,64 @@ const App = () => {
   };
 
   const backdropClickHnadler = () => {
-    setIsSideDrawerOpen(!isSideDrawerOpen)
+    setIsSideDrawerOpen(!isSideDrawerOpen);
   };
 
   let backdrop;
 
   if (isSideDrawerOpen) {
-    backdrop = <Backdrop drawerOpen={isSideDrawerOpen} modalOpen={modalOpen} toggleModal={toggleModal} click={backdropClickHnadler}/>
+    backdrop = (
+      <Backdrop
+        drawerOpen={isSideDrawerOpen}
+        modalOpen={modalOpen}
+        toggleModal={toggleModal}
+        click={backdropClickHnadler}
+      />
+    );
   }
 
-  if(modalOpen) {
-    backdrop = <Backdrop drawerOpen={isSideDrawerOpen} modalOpen={modalOpen} toggleModal={toggleModal} click={backdropClickHnadler}/>
+  if (modalOpen) {
+    backdrop = (
+      <Backdrop
+        drawerOpen={isSideDrawerOpen}
+        modalOpen={modalOpen}
+        toggleModal={toggleModal}
+        click={backdropClickHnadler}
+      />
+    );
   }
-
-
 
   return (
     <div>
-      <Toolbar scrollPosition={scrollPosition} drawerOpen={isSideDrawerOpen} show={scrollDir} drawerClickHandler={toggleDrawer} handleScroll={handleScroll} landingRef={landingRef} secondRef={secondRef} thirdRef={thirdRef} />
-      <SideDrawer show={isSideDrawerOpen} drawerClickHandler={toggleDrawer} handleScroll={handleScroll} landingRef={landingRef} secondRef={secondRef} thirdRef={thirdRef} />
+      <Toolbar
+        scrollPosition={scrollPosition}
+        drawerOpen={isSideDrawerOpen}
+        show={scrollDir}
+        drawerClickHandler={toggleDrawer}
+        handleScroll={handleScroll}
+        landingRef={landingRef}
+        secondRef={secondRef}
+        thirdRef={thirdRef}
+      />
+      <SideDrawer
+        show={isSideDrawerOpen}
+        drawerClickHandler={toggleDrawer}
+        handleScroll={handleScroll}
+        landingRef={landingRef}
+        secondRef={secondRef}
+        thirdRef={thirdRef}
+      />
       {backdrop}
-      <LandingScreen landingRef={landingRef}/>
+      <LandingScreen landingRef={landingRef} />
       <SecondScreen secondRef={secondRef} />
-      <ThirdScreen modalOpen={modalOpen} thirdRef={thirdRef} toggleModal={toggleModal} /> 
+      <ThirdScreen
+        modalOpen={modalOpen}
+        thirdRef={thirdRef}
+        toggleModal={toggleModal}
+      />
       <SideElement />
     </div>
   );
-}
+};
 
 export default App;
